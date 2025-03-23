@@ -1,0 +1,350 @@
+/* Variable declarations */
+:root {
+    --headFont: Poppins, Georgia, 'Times New Roman', Times, serif;
+    --headItalic: caveat, cursive;
+}
+
+/* Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: radial-gradient(#948989, #333);
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(195, 92, 92);
+}
+
+/* Logo and Heading */
+.hcontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo_text {
+    display: flex;
+    flex: 50%;
+}
+
+.logo_text img {
+    flex: 40%;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.logo_text h1 {
+    flex: 60%;
+    font-family: var(--headFont);
+    font-size: 3em;
+    font-style: italic;
+    padding: 10px 0;
+}
+
+/* Navigational Menu */
+nav {
+    flex: 45%;
+}
+
+nav ul {
+    flex: 60%;
+    list-style-type: none;
+    background-color: greenyellow;
+    overflow: hidden;
+    margin:  0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav li {
+    float: left;
+    background-color: greenyellow;
+    border-right: 1px solid #fff;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+nav li a:hover:not(.active) {
+    background-color: green;
+    color: white;
+}
+
+nav li .active {
+    background-color: #333;
+    color: azure;
+}
+
+#banner {
+    text-align: center;
+    padding: 20px;
+}
+
+#banner h2 {
+    font-family: var(--headFont);
+    font-size: 1.5em;
+}
+
+#banner p {
+    font-family: var(--headItalic);
+    font-size: 2em;
+}
+
+main {
+    background-color: rgb(212, 167, 107);
+    padding-bottom: 25px;
+}
+
+.c_container {
+    display: flex;
+}
+
+#projects {
+    flex: 30%;
+    border: 1px solid;
+}
+
+#projects h2 {
+    font-family: var(--headFont);
+    font-size: 1.3em;
+}
+
+#projects ul {
+    list-style: none;
+    margin-top: 7px;
+}
+
+#projects li {
+    padding: 7px;
+    border-top: 2px solid;
+}
+
+#projects_page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.project_title {
+    width: 40%;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.project_title .pr_title {
+    padding: 10px;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    .project_title {
+        width: 90%;
+    }
+}
+
+#experience {
+    flex: 35%;
+    border: 1px solid;
+    padding: 5px;
+}
+
+#experience h2 {
+    font-family: var(--headFont);
+    font-size: 1.3em;
+}
+
+#education {
+    flex: 35%;
+    border: 1px solid;
+    padding: 5px;
+}
+
+#education h2 {
+    font-family: var(--headFont);
+    font-size: 1.3em;
+}
+
+#education ul {
+    list-style-type: circle filled;
+    list-style-position: inside;
+}
+
+#education li {
+    margin-left: 5px;
+}
+
+#reviews h2 {
+    margin: 10px;
+    font-family: var(--headFont);
+    font-size: 1.3em;
+}
+
+#reviews > div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#reviews article {
+    max-width: 195px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#reviews blockquote {
+    text-align: center;
+}
+
+#reviews img {
+    width: 100px;
+}
+
+/* Articl Page */
+.article_container {
+    padding-top: 20px;
+}
+
+.article_container article {
+    padding: 20px;
+    text-align: justify;
+    border: 2px solid rgb(118, 113, 28);
+    border-radius: 20px;
+    margin: 0px 20px 20px;
+}
+
+.article_container span {
+    float: right;
+}
+
+.article_container span a {
+    color: rgb(118, 113, 28);
+}
+
+@media only screen and (max-width: 992px) {
+    .logo_text {
+        display: flex;
+        flex: 100%;
+        justify-content: center;
+    }
+    nav {
+        flex: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .logo_text {
+        flex-direction: column;
+        align-items: center;
+    }
+    .c_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #projects {
+        flex: 50%;
+    }
+    #experience {
+        flex: 50%;
+    }
+    #education {
+        flex: 100%;
+    }
+    #reviews > div {
+        flex-wrap: wrap;
+        row-gap: 25px;
+    }
+    #reviews article {
+        max-width: 60%;
+    }
+    .project_title {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .project_title .pr_title {
+        vertical-align: center;
+    }
+    
+    .project_title .view_pr {
+        border: 1px solid rgb(106, 134, 63);
+        padding: 7px 20px;
+        background-color: greenyellow;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav li {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+    }
+    #projects {
+        flex: 100%;
+    }
+    #experience{
+        flex: 100%;
+    }
+}
+
+/* Form Styles */
+form {
+    width: 80%;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+fieldset {
+    padding: 15px;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+button {
+    padding: 12px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer {
+    background-color: #7f5b34;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    margin: 5px;
+    opacity: 0.8;
+}
+
+footer a:hover {
+    opacity: 1;
+}
